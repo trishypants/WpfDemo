@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/MusicCollection/v17
+/.vs
+/MusicCollection/bin/Debug/net6.0-windows7.0
+/MusicCollection/obj
+/MusicCollection/bin/Debug
+/LibraryCollection/bin/Debug/net6.0-windows
+/LibraryCollection/obj

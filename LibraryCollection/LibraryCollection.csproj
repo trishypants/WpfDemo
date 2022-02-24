@@ -1,0 +1,1248 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net6.0-windows</TargetFramework>
+		<Nullable>enable</Nullable>
+		<UseWPF>true</UseWPF>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="Content\Images\Games\150578-Guitar_Hero_II_%28USA%29-1.jpg" />
+		<None Remove="Content\Images\Games\200px-Chicken_Little_-_Ace_in_Action_video_game_cover.png" />
+		<None Remove="Content\Images\Games\200px-Kinect_Adventures_cover.jpg" />
+		<None Remove="Content\Images\Games\200px-Street_Fighter_II_Dash_%28flyer%29.png" />
+		<None Remove="Content\Images\Games\220px-Contra_-_Hard_Corps_Coverart.png" />
+		<None Remove="Content\Images\Games\220px-GTASABOX.jpg" />
+		<None Remove="Content\Images\Games\220px-King%27s_Quest_III_-_To_Heir_Is_Human_Coverart.jpg" />
+		<None Remove="Content\Images\Games\220px-King%27s_Quest_I_-_Quest_for_the_Crown_Coverart.jpg" />
+		<None Remove="Content\Images\Games\220px-King%27s_Quest_V_-_Absence_Makes_the_Heart_Go_Yonder!_Coverart.jpg" />
+		<None Remove="Content\Images\Games\220px-Pac_flyer.png" />
+		<None Remove="Content\Images\Games\220px-Phantasy_Star_EotM_cover.jpg" />
+		<None Remove="Content\Images\Games\240px-Official_Saboteur_Game_Cover_Art.JPG" />
+		<None Remove="Content\Images\Games\248px-Dance_Dance_Revolution_SuperNova_North_American_PlayStation_2_cover_art.png" />
+		<None Remove="Content\Images\Games\248px-Dance_Dance_Revolution_Ultramix_cover_art.png" />
+		<None Remove="Content\Images\Games\248px-DDRMAX2_Dance_Dance_Revolution_cover_art.png" />
+		<None Remove="Content\Images\Games\250px-Buzz_Quiz_TV.jpg" />
+		<None Remove="Content\Images\Games\250px-Call_of_Duty_4_Modern_Warfare.jpg" />
+		<None Remove="Content\Images\Games\250px-Castlevania_NES_box_art.jpg" />
+		<None Remove="Content\Images\Games\250px-Cityfolkbox.jpg" />
+		<None Remove="Content\Images\Games\250px-Corvette_Cover.jpg" />
+		<None Remove="Content\Images\Games\250px-Dance_Dance_Revolution_Extreme_2_cover_art.png" />
+		<None Remove="Content\Images\Games\250px-Dance_Dance_Revolution_Ultramix_2_cover_art.png" />
+		<None Remove="Content\Images\Games\250px-Dance_Dance_Revolution_Ultramix_3_cover_art.png" />
+		<None Remove="Content\Images\Games\250px-Dance_Dance_Revolution_Ultramix_4_cover_art.png" />
+		<None Remove="Content\Images\Games\250px-DDR_Mario_Mix.jpg" />
+		<None Remove="Content\Images\Games\250px-Dragon_Warrior.jpg" />
+		<None Remove="Content\Images\Games\250px-FaceBreaker_box_art.png" />
+		<None Remove="Content\Images\Games\250px-Gears_of_War_3_box_artwork.png" />
+		<None Remove="Content\Images\Games\250px-GoldenEye007box.jpg" />
+		<None Remove="Content\Images\Games\250px-GTA3boxcover.jpg" />
+		<None Remove="Content\Images\Games\250px-Gunstar_Heroes.jpg" />
+		<None Remove="Content\Images\Games\250px-Halo2-cover.png" />
+		<None Remove="Content\Images\Games\250px-Halo_3_ODST_Box_Art.png" />
+		<None Remove="Content\Images\Games\250px-JakIIbox.jpg" />
+		<None Remove="Content\Images\Games\250px-Jak_and_Daxter_-_The_Precursor_Legacy_Coverart.png" />
+		<None Remove="Content\Images\Games\250px-Killzone2_Box_Art.jpg" />
+		<None Remove="Content\Images\Games\250px-Landstalker_us.jpg" />
+		<None Remove="Content\Images\Games\250px-NewSuperMarioBrosWiiBoxart.png" />
+		<None Remove="Content\Images\Games\250px-Nintendo_Land_box_artwork.png" />
+		<None Remove="Content\Images\Games\250px-Resistance_2_cover_art.png" />
+		<None Remove="Content\Images\Games\250px-Robotinvasion.jpg" />
+		<None Remove="Content\Images\Games\250px-Shadow_the_Hedgehog_Coverart.png" />
+		<None Remove="Content\Images\Games\250px-Smetroidbox.jpg" />
+		<None Remove="Content\Images\Games\250px-Sonic_Lost_World_Wii_U_Box_art.jpg" />
+		<None Remove="Content\Images\Games\250px-Starhawk_coverart.jpg" />
+		<None Remove="Content\Images\Games\250px-Star_Trek_Game_cover.jpg" />
+		<None Remove="Content\Images\Games\250px-SuperMarioGalaxy.jpg" />
+		<None Remove="Content\Images\Games\250px-Super_Mario_Bros._3_coverart.png" />
+		<None Remove="Content\Images\Games\250px-Super_mario_sunshine.jpg" />
+		<None Remove="Content\Images\Games\250px-Super_Paper_Mario_cover.jpg" />
+		<None Remove="Content\Images\Games\250px-The_Legend_of_Zelda_A_Link_to_the_Past_SNES_Game_Cover.jpg" />
+		<None Remove="Content\Images\Games\252px-Grand_Theft_Auto_Liberty_City_Stories_box.jpg" />
+		<None Remove="Content\Images\Games\252px-Lego_Indiana_Jones_cover.jpg" />
+		<None Remove="Content\Images\Games\255px-Sports_Champions.png" />
+		<None Remove="Content\Images\Games\256px-ArmyofTwo_front-1-.jpg" />
+		<None Remove="Content\Images\Games\256px-Battlefield_Bad_Company_Game_Cover.png" />
+		<None Remove="Content\Images\Games\256px-Bioshock_2_boxart.jpg" />
+		<None Remove="Content\Images\Games\256px-BioShock_cover.jpg" />
+		<None Remove="Content\Images\Games\256px-Bureau_XCOM_Declassified_cover.png" />
+		<None Remove="Content\Images\Games\256px-Burnout_Paradise_Boxart_2.jpg" />
+		<None Remove="Content\Images\Games\256px-Dance_Central_boxart.png" />
+		<None Remove="Content\Images\Games\256px-Dkc_snes_boxart.jpg" />
+		<None Remove="Content\Images\Games\256px-Enemy_Territory_Quake_Wars_Game_Cover.jpg" />
+		<None Remove="Content\Images\Games\256px-Forza_Motorsport_4_cover.jpg" />
+		<None Remove="Content\Images\Games\256px-FuseInsomniacGames.jpg" />
+		<None Remove="Content\Images\Games\256px-Gears_of_War.png" />
+		<None Remove="Content\Images\Games\256px-Grand_Theft_Auto_IV_Episodes_From_Liberty_City.jpg" />
+		<None Remove="Content\Images\Games\256px-Guitarhero-cover.jpg" />
+		<None Remove="Content\Images\Games\256px-Ikaruga_cover_DC.jpg" />
+		<None Remove="Content\Images\Games\256px-Outruncover.jpg" />
+		<None Remove="Content\Images\Games\256px-PGR4boxart.jpg" />
+		<None Remove="Content\Images\Games\256px-Punch-Out!!.jpg" />
+		<None Remove="Content\Images\Games\256px-Ratchet_&amp;_Clank_Future-_A_Crack_in_Time.jpg" />
+		<None Remove="Content\Images\Games\256px-Rbbox.jpg" />
+		<None Remove="Content\Images\Games\256px-Red_Dead_Redemption.jpg" />
+		<None Remove="Content\Images\Games\256px-SaintsRowIV.jpg" />
+		<None Remove="Content\Images\Games\256px-Skylanders-spyros-adventure-cover-okladka.jpg" />
+		<None Remove="Content\Images\Games\256px-Spider-Man-the-Movie.jpg" />
+		<None Remove="Content\Images\Games\256px-Thief_box_art.jpg" />
+		<None Remove="Content\Images\Games\256px-Tomb_Raider_%281996%29.png" />
+		<None Remove="Content\Images\Games\256px-Tomb_Raider_-_Anniversary.png" />
+		<None Remove="Content\Images\Games\256px-Tomb_Raider_-_Underworld.png" />
+		<None Remove="Content\Images\Games\256px-Uncharted_3_Boxart.jpg" />
+		<None Remove="Content\Images\Games\256px-ZombiU_Box_Art_%28Final%29.jpg" />
+		<None Remove="Content\Images\Games\627696boxart_160w.jpg" />
+		<None Remove="Content\Images\Games\Alan_Wake_Game_Cover.jpg" />
+		<None Remove="Content\Images\Games\Alpha_Protocol_cover.jpg" />
+		<None Remove="Content\Images\Games\Altered_Beast_43.png" />
+		<None Remove="Content\Images\Games\American_Chopper_2_-_Full_Throttle_Coverart.png" />
+		<None Remove="Content\Images\Games\Amped_freestyle_snowboarding.jpg" />
+		<None Remove="Content\Images\Games\ArmyOfTwo3.jpg" />
+		<None Remove="Content\Images\Games\Assassin%27s_Creed_cover.png" />
+		<None Remove="Content\Images\Games\Assassins_Creed_2_Box_Art.JPG" />
+		<None Remove="Content\Images\Games\Assassins_Creed_brotherhood_cover.jpg" />
+		<None Remove="Content\Images\Games\Atlantis_The_Lost_Tales_Game_Cover.jpg" />
+		<None Remove="Content\Images\Games\Batman_Arkham_Asylum_Videogame_Cover.jpg" />
+		<None Remove="Content\Images\Games\Battlefield_Bad_Company_2_cover.jpg" />
+		<None Remove="Content\Images\Games\BionicCommandoRearmedcover.jpg" />
+		<None Remove="Content\Images\Games\Blackwellbund.jpg" />
+		<None Remove="Content\Images\Games\Blood_Wake_Coverart.png" />
+		<None Remove="Content\Images\Games\Borderlands2boxart3.jpg" />
+		<None Remove="Content\Images\Games\Borderlandscover.jpg" />
+		<None Remove="Content\Images\Games\BRINK_%28game_box_art%29.jpg" />
+		<None Remove="Content\Images\Games\Broken_Sword_22.png" />
+		<None Remove="Content\Images\Games\Broken_Sword_2_23.png" />
+		<None Remove="Content\Images\Games\Broken_Sword_3_24.png" />
+		<None Remove="Content\Images\Games\Brothers_in_Arms_-_Hells_Highway_300x351.jpg" />
+		<None Remove="Content\Images\Games\Buffy_the_Vampire_Slayer_Coverart.png" />
+		<None Remove="Content\Images\Games\Castlevania_III_Dracula%27s_Curse.jpg" />
+		<None Remove="Content\Images\Games\Castle_of_illusion_Mickey_mouse.jpg" />
+		<None Remove="Content\Images\Games\Chicken_Little_GC.jpg" />
+		<None Remove="Content\Images\Games\Chrono_Trigger.jpg" />
+		<None Remove="Content\Images\Games\Crackdown2Cover.jpg" />
+		<None Remove="Content\Images\Games\Crackdownfinalbox.jpg" />
+		<None Remove="Content\Images\Games\CrazyTaxi_cover.png" />
+		<None Remove="Content\Images\Games\CrazyTaxi_GC.jpeg" />
+		<None Remove="Content\Images\Games\Crazy_Taxi_3_-_High_Roller_Coverart.png" />
+		<None Remove="Content\Images\Games\Dark_Void.jpg" />
+		<None Remove="Content\Images\Games\Deadlocked.jpg" />
+		<None Remove="Content\Images\Games\Deadrising_boxart.jpg" />
+		<None Remove="Content\Images\Games\Dead_island_PC_packshot.png" />
+		<None Remove="Content\Images\Games\Dead_Space_2_Box_Art.jpg" />
+		<None Remove="Content\Images\Games\Dead_Space_Box_Art.jpg" />
+		<None Remove="Content\Images\Games\Dragonsphere_cover.jpg" />
+		<None Remove="Content\Images\Games\DuckTales_Remastered.jpg" />
+		<None Remove="Content\Images\Games\Ecco-cover.jpg" />
+		<None Remove="Content\Images\Games\Etvideogamecover.jpg" />
+		<None Remove="Content\Images\Games\Fableiii.jpg" />
+		<None Remove="Content\Images\Games\Fable_II.jpg" />
+		<None Remove="Content\Images\Games\Fallout_11.png" />
+		<None Remove="Content\Images\Games\Fallout_3_cover_art.PNG" />
+		<None Remove="Content\Images\Games\Far_Cry_2_cover_art.jpg" />
+		<None Remove="Content\Images\Games\Ff3cover.jpg" />
+		<None Remove="Content\Images\Games\Folklore.jpg" />
+		<None Remove="Content\Images\Games\Forza_Horizon_boxart.jpg" />
+		<None Remove="Content\Images\Games\Freespace_2_19.png" />
+		<None Remove="Content\Images\Games\Gabriel_Knight.png" />
+		<None Remove="Content\Images\Games\Gabriel_Knight_2_25.png" />
+		<None Remove="Content\Images\Games\Gabriel_Knight_3_Blood_of_the_Sacred_26.png" />
+		<None Remove="Content\Images\Games\Gears_of_War_2_Game_Cover.jpg" />
+		<None Remove="Content\Images\Games\Gemini_Rue_35.png" />
+		<None Remove="Content\Images\Games\Ghostbusters_%281990%29_game_cover.jpg" />
+		<None Remove="Content\Images\Games\God_of_War_III_cover_art.jpg" />
+		<None Remove="Content\Images\Games\Gow2-2.jpg" />
+		<None Remove="Content\Images\Games\Gowbox.jpg" />
+		<None Remove="Content\Images\Games\Grand_Theft_Auto_IV_cover.jpg" />
+		<None Remove="Content\Images\Games\Grand_Theft_Auto_V.png" />
+		<None Remove="Content\Images\Games\GT5-boxart-final-EU.jpg" />
+		<None Remove="Content\Images\Games\Guitar-hero-iii-cover-image.jpg" />
+		<None Remove="Content\Images\Games\Halo-_Reach_box_art.png" />
+		<None Remove="Content\Images\Games\Halo_-_Combat_Evolved_%28XBox_version_-_box_art%29.jpg" />
+		<None Remove="Content\Images\Games\Halo_4_box_artwork.png" />
+		<None Remove="Content\Images\Games\Heavenly_Sword_Game_Cover.jpg" />
+		<None Remove="Content\Images\Games\HerzogZwei-Cover.png" />
+		<None Remove="Content\Images\Games\Hltob-win-cover.jpg" />
+		<None Remove="Content\Images\Games\Homefront.jpg" />
+		<None Remove="Content\Images\Games\Ikaruga_GC.jpg" />
+		<None Remove="Content\Images\Games\Infamous-cover.jpg" />
+		<None Remove="Content\Images\Games\Infamous_2.png" />
+		<None Remove="Content\Images\Games\Infamous_second_son_boxart.jpg" />
+		<None Remove="Content\Images\Games\JagedAlliance_DeadlyGames.jpg" />
+		<None Remove="Content\Images\Games\Just_Cause_2.jpg" />
+		<None Remove="Content\Images\Games\Just_Dance_%28Wii%29_boxart.jpg" />
+		<None Remove="Content\Images\Games\Just_Dance_2_Coverart.png" />
+		<None Remove="Content\Images\Games\KDCEnglishBoxart1.jpg" />
+		<None Remove="Content\Images\Games\Killzone_3.jpg" />
+		<None Remove="Content\Images\Games\King%27s_Quest_-_Mask_of_Eternity_Coverart.jpg" />
+		<None Remove="Content\Images\Games\King%27s_Quest_II_-_Romancing_the_Throne_Coverart.jpg" />
+		<None Remove="Content\Images\Games\King%27s_Quest_IV_-_The_Perils_of_Rosella_Coverart.jpg" />
+		<None Remove="Content\Images\Games\King%27s_Quest_VII_-_The_Princeless_Bride_Coverart.jpg" />
+		<None Remove="Content\Images\Games\King%27s_Quest_VI_-_Heir_Today,_Gone_Tomorrow_Coverart.jpg" />
+		<None Remove="Content\Images\Games\Kirby%27s_Epic_Yarn_Title.png" />
+		<None Remove="Content\Images\Games\Knack.jpg" />
+		<None Remove="Content\Images\Games\Kung_Fu_Chaos.jpg" />
+		<None Remove="Content\Images\Games\Kung_Fu_Panda_Game_Cover.jpg" />
+		<None Remove="Content\Images\Games\LA-Noire-Box-Art.jpg" />
+		<None Remove="Content\Images\Games\Left4Dead_Windows_cover.jpg" />
+		<None Remove="Content\Images\Games\Legend_of_zelda_cover_%28with_cartridge%29_gold.png" />
+		<None Remove="Content\Images\Games\LegoCityUndercover.jpg" />
+		<None Remove="Content\Images\Games\Littlebigplanet2-boxart.jpg" />
+		<None Remove="Content\Images\Games\LittleBigPlanetOfficialUKBoxArt.png" />
+		<None Remove="Content\Images\Games\LittleBigPlanet_3_boxart.jpg" />
+		<None Remove="Content\Images\Games\Lost-Planet-New.jpg" />
+		<None Remove="Content\Images\Games\Lostplanet2cover.jpg" />
+		<None Remove="Content\Images\Games\Lure_of_the_temptress_14.png" />
+		<None Remove="Content\Images\Games\Madden_NFL_2005_Coverart.png" />
+		<None Remove="Content\Images\Games\Mafia_II_Boxart.jpg" />
+		<None Remove="Content\Images\Games\MAG_%28video_game%29.jpg" />
+		<None Remove="Content\Images\Games\Mario_Kart_7_31.png" />
+		<None Remove="Content\Images\Games\Mario_Kart_Wii.png" />
+		<None Remove="Content\Images\Games\Marvel_Vs_Capcom_3_box_artwork.jpg" />
+		<None Remove="Content\Images\Games\MassEffect.jpg" />
+		<None Remove="Content\Images\Games\MassEffect2_cover.PNG" />
+		<None Remove="Content\Images\Games\Mass_Effect_3_Game_Cover.jpg" />
+		<None Remove="Content\Images\Games\Megaman2_box.jpg" />
+		<None Remove="Content\Images\Games\MegamManX7box.jpg" />
+		<None Remove="Content\Images\Games\Mega_Man_X_Collection_Coverart.jpg" />
+		<None Remove="Content\Images\Games\Metroid_boxart.jpg" />
+		<None Remove="Content\Images\Games\Metroid_Prime_3_Packaging.jpg" />
+		<None Remove="Content\Images\Games\Mgs3box.jpg" />
+		<None Remove="Content\Images\Games\Midnight_Club_II_Coverart.jpg" />
+		<None Remove="Content\Images\Games\Mirror%27s_Edge.jpg" />
+		<None Remove="Content\Images\Games\nba-street-cover666145.jpg" />
+		<None Remove="Content\Images\Games\Need_for_Speed,_Most_Wanted_2012_video_game_Box_Art.jpg" />
+		<None Remove="Content\Images\Games\New_Super_Mario_Bros._U_box_art.png" />
+		<None Remove="Content\Images\Games\NiGHTS.jpg" />
+		<None Remove="Content\Images\Games\Official_cover_art_for_Bioshock_Infinite.jpg" />
+		<None Remove="Content\Images\Games\Painkiller_10.png" />
+		<None Remove="Content\Images\Games\Pariah_%28video_game_box_art%29.jpg" />
+		<None Remove="Content\Images\Games\Phantasmagoria_2.png" />
+		<None Remove="Content\Images\Games\Phantasy_Star_Online.PNG" />
+		<None Remove="Content\Images\Games\Phantasy_Star_Universe_box_US.jpg" />
+		<None Remove="Content\Images\Games\Pitfall!_Coverart.png" />
+		<None Remove="Content\Images\Games\PlayStationAllStars.jpg" />
+		<None Remove="Content\Images\Games\Prince_of_Persia_2008_vg_Box_Art.jpg" />
+		<None Remove="Content\Images\Games\Project_Sylpheed.jpg" />
+		<None Remove="Content\Images\Games\PROTOTYPE.png" />
+		<None Remove="Content\Images\Games\Prototype_2.png" />
+		<None Remove="Content\Images\Games\Punch-out_mrdream_boxart.PNG" />
+		<None Remove="Content\Images\Games\Quest_For_Glory_1_4.png" />
+		<None Remove="Content\Images\Games\Quest_For_Glory_2_5.png" />
+		<None Remove="Content\Images\Games\Quest_For_Glory_3_6.png" />
+		<None Remove="Content\Images\Games\Quest_For_Glory_4_7.png" />
+		<None Remove="Content\Images\Games\Quest_For_Glory_5_8.png" />
+		<None Remove="Content\Images\Games\RaCbox.jpg" />
+		<None Remove="Content\Images\Games\Ratchetandclank3box.jpg" />
+		<None Remove="Content\Images\Games\Ratchet_&amp;_Clank_Future_Tools_of_Destruction_Game_Cover.jpg" />
+		<None Remove="Content\Images\Games\Ratchet_&amp;_Clank_Into_the_Nexus_Cover.jpg" />
+		<None Remove="Content\Images\Games\Ratchet_and_clank_gc_image.jpg" />
+		<None Remove="Content\Images\Games\RECV_boxart.jpg" />
+		<None Remove="Content\Images\Games\Red_Faction_Armageddon_Game_Cover.jpg" />
+		<None Remove="Content\Images\Games\Red_Faction_Guerrilla_Cover.jpg" />
+		<None Remove="Content\Images\Games\Resident_Evil_5_Box_Artwork.jpg" />
+		<None Remove="Content\Images\Games\Resident_Evil_6_box_artwork.png" />
+		<None Remove="Content\Images\Games\Resistance_3_box_artwork.png" />
+		<None Remove="Content\Images\Games\Resistance_Fall_of_Man.jpg" />
+		<None Remove="Content\Images\Games\Resitance_Burning_Skies_30.png" />
+		<None Remove="Content\Images\Games\Resoance.jpg" />
+		<None Remove="Content\Images\Games\Rise_of_the_triad_16.png" />
+		<None Remove="Content\Images\Games\Ristar_cover_EU.jpg" />
+		<None Remove="Content\Images\Games\Rockstar_Table_Tennis_Game_Cover.jpg" />
+		<None Remove="Content\Images\Games\Rock_band_cover.jpg" />
+		<None Remove="Content\Images\Games\Saints_Row_2_Game_Cover.jpg" />
+		<None Remove="Content\Images\Games\Saints_Row_The_Third_box_art.jpg" />
+		<None Remove="Content\Images\Games\Sega_GT_2002_Coverart.png" />
+		<None Remove="Content\Images\Games\Shining_Force_II.jpg" />
+		<None Remove="Content\Images\Games\SingstarRock_Cover.jpg" />
+		<None Remove="Content\Images\Games\Singularity_cover.jpg" />
+		<None Remove="Content\Images\Games\Size_Matters.jpg" />
+		<None Remove="Content\Images\Games\Sleeping_Dogs_-_Square_Enix_video_game_cover.jpg" />
+		<None Remove="Content\Images\Games\Sonic_The_Hedgehog_2_37.png" />
+		<None Remove="Content\Images\Games\Sonic_The_Hedgehog_36.png" />
+		<None Remove="Content\Images\Games\Sonic_The_Hedgehog_3_38.png" />
+		<None Remove="Content\Images\Games\Sonic_unleashed_boxart.jpg" />
+		<None Remove="Content\Images\Games\Sotc_boxart.jpg" />
+		<None Remove="Content\Images\Games\Space_Invaders_flyer,_1978.jpg" />
+		<None Remove="Content\Images\Games\Streets_of_Rage_41.png" />
+		<None Remove="Content\Images\Games\SuperMario25thAnn_Cover_SMA25A.jpg" />
+		<None Remove="Content\Images\Games\Super_Mario_3D_Land_32.png" />
+		<None Remove="Content\Images\Games\Super_Mario_3D_World_box_art.jpg" />
+		<None Remove="Content\Images\Games\Super_Mario_Bros._box.png" />
+		<None Remove="Content\Images\Games\Super_Mario_Galaxy_2_Box_Art.jpg" />
+		<None Remove="Content\Images\Games\Super_Monkey_Ball_Coverart.png" />
+		<None Remove="Content\Images\Games\Teenagent_21.png" />
+		<None Remove="Content\Images\Games\Tempest_2000_45.png" />
+		<None Remove="Content\Images\Games\The Witcher_9.png" />
+		<None Remove="Content\Images\Games\The_Force_Unleashed.jpg" />
+		<None Remove="Content\Images\Games\The_Legend_of_Zelda_Ocarina_of_Time_box_art.png" />
+		<None Remove="Content\Images\Games\The_Legend_of_Zelda_Twilight_Princess_Game_Cover.jpg" />
+		<None Remove="Content\Images\Games\The_Simpsons_Road_Rage.jpg" />
+		<None Remove="Content\Images\Games\Thunder_Force_IV.jpg" />
+		<None Remove="Content\Images\Games\TimeShift_coverart.jpg" />
+		<None Remove="Content\Images\Games\TombRaider2013.jpg" />
+		<None Remove="Content\Images\Games\Tomb_Raider_-_Legend.png" />
+		<None Remove="Content\Images\Games\TreasureAdventureGame_tag_box_art.png" />
+		<None Remove="Content\Images\Games\Tron_Evolution.jpg" />
+		<None Remove="Content\Images\Games\Tyrian_2000_20.png" />
+		<None Remove="Content\Images\Games\Ty_the_Tasmanian_Tiger_Coverart.jpg" />
+		<None Remove="Content\Images\Games\Ultimate_alliance.PNG" />
+		<None Remove="Content\Images\Games\Ultima_4_Quest_of_the_Avatar_12.png" />
+		<None Remove="Content\Images\Games\Uncharted_2_updated_PS3_logo.jpg" />
+		<None Remove="Content\Images\Games\Uncharted_Drake%27s_Fortune.jpg" />
+		<None Remove="Content\Images\Games\Uncharted_Golden_Abyss_28.png" />
+		<None Remove="Content\Images\Games\Unrealchampionshipcover.jpg" />
+		<None Remove="Content\Images\Games\Unreal_Tournament_3.jpg" />
+		<None Remove="Content\Images\Games\Vectorman_2_40.png" />
+		<None Remove="Content\Images\Games\Vectorman_39.png" />
+		<None Remove="Content\Images\Games\Vice-city-cover.jpg" />
+		<None Remove="Content\Images\Games\Video_Game_Cover_-_The_Last_of_Us.jpg" />
+		<None Remove="Content\Images\Games\Virtua_Fighter_5_Box_Art.jpg" />
+		<None Remove="Content\Images\Games\Warhawk_cover.jpg" />
+		<None Remove="Content\Images\Games\Watch_Dogs_box_art.jpg" />
+		<None Remove="Content\Images\Games\WiiFitPlus_cover_large.jpg" />
+		<None Remove="Content\Images\Games\Wipeout_2048_29.png" />
+		<None Remove="Content\Images\Games\Wolfenstein_%282009_video_game%29.jpg" />
+		<None Remove="Content\Images\Games\World_Championship_Poker.jpg" />
+		<None Remove="Content\Images\Games\X-Men_Legends_Coverart.png" />
+		<None Remove="Content\Images\Games\X-Men_Legends_II_-_Rise_of_Apocalypse_Coverart.png" />
+		<None Remove="Content\Images\Games\ZeldaWindWakerGCNCoverArtUS.jpg" />
+		<None Remove="Content\Images\Games\Zork_Grand_Inquisitor_15.png" />
+		<None Remove="Content\Images\Games\Zork_Nemesis_18.png" />
+		<None Remove="gamelib.sqlite3" />
+		
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Data.Sqlite.Core" Version="6.0.2" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.2" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="6.0.2" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="6.0.2" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.2" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite.Core" Version="6.0.2" />
+		<PackageReference Include="Microsoft.Toolkit" Version="7.1.2" />
+		<PackageReference Include="Microsoft.Toolkit.Mvvm" Version="7.1.2" />
+		<PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.39" />
+		<PackageReference Include="Syncfusion.Shared.WPF" Version="19.4.0.53" />
+		<PackageReference Include="System.Drawing.Common" Version="6.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Reference Include="Core.Common">
+			<HintPath>lib\Core.Common.dll</HintPath>
+		</Reference>
+		<Reference Include="Core.Common.Wpf">
+			<HintPath>lib\Core.Common.Wpf.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="Content\Images\Games\150578-Guitar_Hero_II_(USA)-1.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\200px-Chicken_Little_-_Ace_in_Action_video_game_cover.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\200px-Kinect_Adventures_cover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\200px-Street_Fighter_II_Dash_(flyer).png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\220px-Contra_-_Hard_Corps_Coverart.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\220px-GTASABOX.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\220px-King's_Quest_III_-_To_Heir_Is_Human_Coverart.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\220px-King's_Quest_I_-_Quest_for_the_Crown_Coverart.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\220px-King's_Quest_V_-_Absence_Makes_the_Heart_Go_Yonder!_Coverart.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\220px-Pac_flyer.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\220px-Phantasy_Star_EotM_cover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\240px-Official_Saboteur_Game_Cover_Art.JPG">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\248px-Dance_Dance_Revolution_SuperNova_North_American_PlayStation_2_cover_art.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\248px-Dance_Dance_Revolution_Ultramix_cover_art.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\248px-DDRMAX2_Dance_Dance_Revolution_cover_art.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\250px-Buzz_Quiz_TV.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\250px-Call_of_Duty_4_Modern_Warfare.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\250px-Castlevania_NES_box_art.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\250px-Cityfolkbox.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\250px-Corvette_Cover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\250px-Dance_Dance_Revolution_Extreme_2_cover_art.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\250px-Dance_Dance_Revolution_Ultramix_2_cover_art.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\250px-Dance_Dance_Revolution_Ultramix_3_cover_art.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\250px-Dance_Dance_Revolution_Ultramix_4_cover_art.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\250px-DDR_Mario_Mix.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\250px-Dragon_Warrior.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\250px-FaceBreaker_box_art.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\250px-Gears_of_War_3_box_artwork.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\250px-GoldenEye007box.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\250px-GTA3boxcover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\250px-Gunstar_Heroes.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\250px-Halo2-cover.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\250px-Halo_3_ODST_Box_Art.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\250px-JakIIbox.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\250px-Jak_and_Daxter_-_The_Precursor_Legacy_Coverart.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\250px-Killzone2_Box_Art.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\250px-Landstalker_us.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\250px-NewSuperMarioBrosWiiBoxart.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\250px-Nintendo_Land_box_artwork.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\250px-Resistance_2_cover_art.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\250px-Robotinvasion.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\250px-Shadow_the_Hedgehog_Coverart.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\250px-Smetroidbox.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\250px-Sonic_Lost_World_Wii_U_Box_art.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\250px-Starhawk_coverart.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\250px-Star_Trek_Game_cover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\250px-SuperMarioGalaxy.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\250px-Super_Mario_Bros._3_coverart.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\250px-Super_mario_sunshine.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\250px-Super_Paper_Mario_cover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\250px-The_Legend_of_Zelda_A_Link_to_the_Past_SNES_Game_Cover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\252px-Grand_Theft_Auto_Liberty_City_Stories_box.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\252px-Lego_Indiana_Jones_cover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\255px-Sports_Champions.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\256px-ArmyofTwo_front-1-.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\256px-Battlefield_Bad_Company_Game_Cover.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\256px-Bioshock_2_boxart.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\256px-BioShock_cover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\256px-Bureau_XCOM_Declassified_cover.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\256px-Burnout_Paradise_Boxart_2.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\256px-Dance_Central_boxart.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\256px-Dkc_snes_boxart.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\256px-Enemy_Territory_Quake_Wars_Game_Cover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\256px-Forza_Motorsport_4_cover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\256px-FuseInsomniacGames.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\256px-Gears_of_War.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\256px-Grand_Theft_Auto_IV_Episodes_From_Liberty_City.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\256px-Guitarhero-cover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\256px-Ikaruga_cover_DC.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\256px-Outruncover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\256px-PGR4boxart.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\256px-Punch-Out!!.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\256px-Ratchet_&amp;_Clank_Future-_A_Crack_in_Time.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\256px-Rbbox.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\256px-Red_Dead_Redemption.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\256px-SaintsRowIV.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\256px-Skylanders-spyros-adventure-cover-okladka.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\256px-Spider-Man-the-Movie.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\256px-Thief_box_art.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\256px-Tomb_Raider_(1996).png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\256px-Tomb_Raider_-_Anniversary.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\256px-Tomb_Raider_-_Underworld.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\256px-Uncharted_3_Boxart.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\256px-ZombiU_Box_Art_(Final).jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\627696boxart_160w.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Alan_Wake_Game_Cover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Alpha_Protocol_cover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Altered_Beast_43.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\American_Chopper_2_-_Full_Throttle_Coverart.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Amped_freestyle_snowboarding.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\ArmyOfTwo3.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Assassin's_Creed_cover.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Assassins_Creed_2_Box_Art.JPG">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Assassins_Creed_brotherhood_cover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Atlantis_The_Lost_Tales_Game_Cover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Batman_Arkham_Asylum_Videogame_Cover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Battlefield_Bad_Company_2_cover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\BionicCommandoRearmedcover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Blackwellbund.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Blood_Wake_Coverart.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Borderlands2boxart3.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Borderlandscover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\BRINK_(game_box_art).jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Broken_Sword_22.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Broken_Sword_2_23.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Broken_Sword_3_24.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Brothers_in_Arms_-_Hells_Highway_300x351.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Buffy_the_Vampire_Slayer_Coverart.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Castlevania_III_Dracula's_Curse.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Castle_of_illusion_Mickey_mouse.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Chicken_Little_GC.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Chrono_Trigger.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Crackdown2Cover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Crackdownfinalbox.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\CrazyTaxi_cover.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\CrazyTaxi_GC.jpeg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Crazy_Taxi_3_-_High_Roller_Coverart.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Dark_Void.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Deadlocked.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Deadrising_boxart.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Dead_island_PC_packshot.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Dead_Space_2_Box_Art.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Dead_Space_Box_Art.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Dragonsphere_cover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\DuckTales_Remastered.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Ecco-cover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Etvideogamecover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Fableiii.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Fable_II.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Fallout_11.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Fallout_3_cover_art.PNG">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Far_Cry_2_cover_art.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Ff3cover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Folklore.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Forza_Horizon_boxart.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Freespace_2_19.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Gabriel_Knight.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Gabriel_Knight_2_25.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Gabriel_Knight_3_Blood_of_the_Sacred_26.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Gears_of_War_2_Game_Cover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Gemini_Rue_35.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Ghostbusters_(1990)_game_cover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\God_of_War_III_cover_art.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Gow2-2.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Gowbox.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Grand_Theft_Auto_IV_cover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Grand_Theft_Auto_V.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\GT5-boxart-final-EU.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Guitar-hero-iii-cover-image.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Halo-_Reach_box_art.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Halo_-_Combat_Evolved_(XBox_version_-_box_art).jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Halo_4_box_artwork.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Heavenly_Sword_Game_Cover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\HerzogZwei-Cover.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Hltob-win-cover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Homefront.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Ikaruga_GC.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Infamous-cover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Infamous_2.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Infamous_second_son_boxart.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\JagedAlliance_DeadlyGames.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Just_Cause_2.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Just_Dance_(Wii)_boxart.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Just_Dance_2_Coverart.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\KDCEnglishBoxart1.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Killzone_3.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\King's_Quest_-_Mask_of_Eternity_Coverart.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\King's_Quest_II_-_Romancing_the_Throne_Coverart.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\King's_Quest_IV_-_The_Perils_of_Rosella_Coverart.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\King's_Quest_VII_-_The_Princeless_Bride_Coverart.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\King's_Quest_VI_-_Heir_Today,_Gone_Tomorrow_Coverart.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Kirby's_Epic_Yarn_Title.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Knack.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Kung_Fu_Chaos.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Kung_Fu_Panda_Game_Cover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\LA-Noire-Box-Art.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Left4Dead_Windows_cover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Legend_of_zelda_cover_(with_cartridge)_gold.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\LegoCityUndercover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Littlebigplanet2-boxart.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\LittleBigPlanetOfficialUKBoxArt.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\LittleBigPlanet_3_boxart.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Lost-Planet-New.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Lostplanet2cover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Lure_of_the_temptress_14.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Madden_NFL_2005_Coverart.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Mafia_II_Boxart.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\MAG_(video_game).jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Mario_Kart_7_31.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Mario_Kart_Wii.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Marvel_Vs_Capcom_3_box_artwork.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\MassEffect.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\MassEffect2_cover.PNG">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Mass_Effect_3_Game_Cover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Megaman2_box.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\MegamManX7box.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Mega_Man_X_Collection_Coverart.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Metroid_boxart.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Metroid_Prime_3_Packaging.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Mgs3box.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Midnight_Club_II_Coverart.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Mirror's_Edge.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\nba-street-cover666145.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Need_for_Speed,_Most_Wanted_2012_video_game_Box_Art.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\New_Super_Mario_Bros._U_box_art.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\NiGHTS.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Official_cover_art_for_Bioshock_Infinite.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Painkiller_10.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Pariah_(video_game_box_art).jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Phantasmagoria_2.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Phantasy_Star_Online.PNG">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Phantasy_Star_Universe_box_US.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Pitfall!_Coverart.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\PlayStationAllStars.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Prince_of_Persia_2008_vg_Box_Art.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Project_Sylpheed.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\PROTOTYPE.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Prototype_2.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Punch-out_mrdream_boxart.PNG">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Quest_For_Glory_1_4.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Quest_For_Glory_2_5.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Quest_For_Glory_3_6.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Quest_For_Glory_4_7.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Quest_For_Glory_5_8.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\RaCbox.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Ratchetandclank3box.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Ratchet_&amp;_Clank_Future_Tools_of_Destruction_Game_Cover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Ratchet_&amp;_Clank_Into_the_Nexus_Cover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Ratchet_and_clank_gc_image.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\RECV_boxart.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Red_Faction_Armageddon_Game_Cover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Red_Faction_Guerrilla_Cover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Resident_Evil_5_Box_Artwork.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Resident_Evil_6_box_artwork.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Resistance_3_box_artwork.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Resistance_Fall_of_Man.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Resitance_Burning_Skies_30.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Resoance.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Rise_of_the_triad_16.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Ristar_cover_EU.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Rockstar_Table_Tennis_Game_Cover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Rock_band_cover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Saints_Row_2_Game_Cover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Saints_Row_The_Third_box_art.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Sega_GT_2002_Coverart.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Shining_Force_II.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\SingstarRock_Cover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Singularity_cover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Size_Matters.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Sleeping_Dogs_-_Square_Enix_video_game_cover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Sonic_The_Hedgehog_2_37.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Sonic_The_Hedgehog_36.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Sonic_The_Hedgehog_3_38.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Sonic_unleashed_boxart.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Sotc_boxart.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Space_Invaders_flyer,_1978.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Streets_of_Rage_41.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\SuperMario25thAnn_Cover_SMA25A.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Super_Mario_3D_Land_32.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Super_Mario_3D_World_box_art.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Super_Mario_Bros._box.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Super_Mario_Galaxy_2_Box_Art.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Super_Monkey_Ball_Coverart.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Teenagent_21.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Tempest_2000_45.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\The Witcher_9.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\The_Force_Unleashed.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\The_Legend_of_Zelda_Ocarina_of_Time_box_art.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\The_Legend_of_Zelda_Twilight_Princess_Game_Cover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\The_Simpsons_Road_Rage.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Thunder_Force_IV.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\TimeShift_coverart.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\TombRaider2013.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Tomb_Raider_-_Legend.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\TreasureAdventureGame_tag_box_art.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Tron_Evolution.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Tyrian_2000_20.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Ty_the_Tasmanian_Tiger_Coverart.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Ultimate_alliance.PNG">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Ultima_4_Quest_of_the_Avatar_12.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Uncharted_2_updated_PS3_logo.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Uncharted_Drake's_Fortune.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Uncharted_Golden_Abyss_28.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Unrealchampionshipcover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Unreal_Tournament_3.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Vectorman_2_40.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Vectorman_39.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Vice-city-cover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Video_Game_Cover_-_The_Last_of_Us.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Virtua_Fighter_5_Box_Art.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Warhawk_cover.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Watch_Dogs_box_art.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\WiiFitPlus_cover_large.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Wipeout_2048_29.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Wolfenstein_(2009_video_game).jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\World_Championship_Poker.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\X-Men_Legends_Coverart.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\X-Men_Legends_II_-_Rise_of_Apocalypse_Coverart.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\ZeldaWindWakerGCNCoverArtUS.jpg">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Zork_Grand_Inquisitor_15.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Content\Images\Games\Zork_Nemesis_18.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="gamelib.sqlite3">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+</Project>
