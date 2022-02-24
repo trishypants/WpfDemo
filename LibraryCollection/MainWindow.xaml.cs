@@ -22,22 +22,15 @@ namespace LibraryCollection
     /// </summary>
     public partial class MainWindow : Window
     {
-        private NavigateHelper navigator; // Object to help with Navigation and removes code from CodeBehind.
+        
         public MainWindow()
         {
             InitializeComponent();
-            navigator = new NavigateHelper(frame);
-            navigator.NavigateTo<CollectionPage>();
+            frame.NavigationService.Navigate(new CollectionPage());
+            
         }
 
-        private void Frame_Navigating(object sender, NavigatingCancelEventArgs e)
-        {
-            INavigationPage page = (INavigationPage)e.Content; // Assuming a page is always a INavigationPage
-            if (page != null)
-            {
-                page.NavigatingTo(navigator); // Pass the Navigation helper to the next page
-            }
-        }
+        
 
     }
 }

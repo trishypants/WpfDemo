@@ -24,9 +24,17 @@ namespace LibraryCollection.Views
     {
         public DetailPage()
         {
+            Loaded += DetailPage_Loaded;
             InitializeComponent();
+           
         }
 
+        private void DetailPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            NavigatingTo(new NavigateHelper(NavigationService));
+        }
+
+      
         /// <summary>
         /// Capture the Navigation helper when the page is navigated to and pass it to it's BaseViewModel
         /// </summary>

@@ -15,30 +15,30 @@ namespace LibraryCollection.Helper
     /// </summary>
     public class NavigateHelper : INavigate
     {
-        private Frame frame;
+        private NavigationService navigation;
         public event EventHandler<NavigatingCancelEventArgs> Navigating;
-        public NavigateHelper(Frame frame)
+        public NavigateHelper(NavigationService navigation)
         {
-            this.frame = frame;
-            this.frame.Navigating += (s, e) => Navigating?.Invoke(s, e);
+            this.navigation = navigation;
+            this.navigation.Navigating += (s, e) => Navigating?.Invoke(s, e);
         }
 
         public void NavigateBack()
         {
-          if( frame.CanGoBack)
-                frame.GoBack();
+          if( navigation.CanGoBack)
+                navigation.GoBack();
         }
 
         public void NavigateTo<T>() where T : INavigationPage
         {
             var page = Construct<T>();
-            frame.Navigate(page);
+            navigation.Navigate(page);
         }
 
         public void NavigateTo<T>(object state) where T : INavigationPage
         {
             var page = Construct<T>();
-            frame.Navigate(page, state);
+            navigation.Navigate(page, state);
         }
 
         /// <summary>

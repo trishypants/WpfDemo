@@ -24,8 +24,17 @@ namespace LibraryCollection.Views
     {
         public CollectionPage()
         {
+
+            this.Loaded += CollectionPage_Loaded;
             InitializeComponent();
+           
         }
+
+        private void CollectionPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            NavigatingTo(new NavigateHelper(NavigationService));
+        }
+       
         /// <summary>
         /// Capture the Navigation helper when the page is navigated to and pass it to it's BaseViewModel
         /// </summary>
