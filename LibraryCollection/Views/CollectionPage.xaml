@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:LibraryCollection.Views"
       xmlns:vm="clr-namespace:LibraryCollection.ViewModels"
-      xmlns:sf="http://schemas.syncfusion.com/wpf"
+      xmlns:c="clr-namespace:LibraryCollection.Controls"
      
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
@@ -19,22 +19,9 @@
                 <ResourceDictionary Source="Resources/GameCollection.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
-            
     </Page.Resources>
 
     <Grid>
-        <ScrollViewer>
-            <ItemsControl
-            ItemsSource="{Binding Games}"
-            ItemTemplate="{DynamicResource ResourceKey=GameGridItem}"
-            >
-                <ItemsControl.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <WrapPanel ItemHeight="250" ItemWidth="250" />
-                    </ItemsPanelTemplate>
-                </ItemsControl.ItemsPanel>
-
-            </ItemsControl>
-        </ScrollViewer>
+        <c:SearchableItemCollection ItemsSource="{Binding FilteredGames}" SearchText="{Binding SearchGames, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
     </Grid>
 </Page>
