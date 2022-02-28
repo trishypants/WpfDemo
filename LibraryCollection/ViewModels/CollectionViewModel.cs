@@ -1,5 +1,6 @@
 ﻿using Common.WPF.Helpers;
 using Common.WPF.ViewModel;
+using LibraryCollection.Helper;
 using LibraryCollection.Model;
 
 using System;
@@ -34,9 +35,14 @@ namespace LibraryCollection.ViewModels
         private void NavigationReady(object? sender, EventArgs e)
         {
             dbContext = new LibraryDbContext("../../../gamelib.sqlite3");
-            Games = new ObservableCollection<GameItem>(dbContext.Games.OrderBy(x=>x.Title).Select(x => new GameItem(dbContext, x, navigator))); // This loads all games, and it's slow would be better to fetch in batchest as it's scrolled and Async
+            Games = new ObservableCollection<GameItem>(dbContext.Games.OrderBy(x => x.Title).Select(x => Map(x, dbContext,navigator))); // This loads all games, and it's slow would be better to fetch in batchest as it's scrolled and Async
             FilteredGames = new ListCollectionView(Games);
             RegisterPropertyMonitor(() => SearchGames, UpdateFilter);
+        }
+
+        private static GameItem Map(Game game, LibraryDbContext dbContext, INavigate navigator)
+        {
+            return game.SystemId == GenesisGameItem.GenesisGUID ? new GenesisGameItem(dbContext, game, navigator): new GameItem(dbContext, game, navigator);
         }
 
         private void UpdateFilter()
@@ -45,11 +51,11 @@ namespace LibraryCollection.ViewModels
             {
                 if (e is GameItem item)
                 {
-                    return item.Title.StartsWith(SearchGames,StringComparison.CurrentCultureIgnoreCase);
+                    return item.Title.StartsWith(SearchGames, StringComparison.CurrentCultureIgnoreCase);
                 }
                 return false;
             };
-            
+
         }
     }
 }
