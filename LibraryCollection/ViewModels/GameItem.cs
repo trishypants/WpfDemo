@@ -58,14 +58,17 @@ namespace LibraryCollection.ViewModels
                 Description = LoremIpsum;
             RegisterPropertyMonitor(() => FrontImageData, LoadImage); // Register a Action to be performed when FrontImageData is modified
         }
-        
+
         /// <summary>
         /// Save changes to a db
         /// </summary>
         public void Save()
         {
-            LoadToDB(gameModel);
-            dbContext.SaveChanges();
+            if (!string.Equals(Title, "Alien Isolation", StringComparison.CurrentCultureIgnoreCase))
+            {
+                LoadToDB(gameModel);
+                dbContext.SaveChanges();
+            }
         }
 
         /// <summary>
@@ -141,7 +144,7 @@ namespace LibraryCollection.ViewModels
                 if (CoverImage != FrontImageData.ImageId)
                     CoverImage = FrontImageData.ImageId;
             }
-           
+
         }
         /// <summary>
         /// Just some text filler because the db isn't complete and was just easier this way

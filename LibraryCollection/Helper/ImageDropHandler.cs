@@ -68,8 +68,11 @@ namespace LibraryCollection.Helper
                 name = fileInfo.Name,
                 path = $"Games\\{fileInfo.Name}"
             };
-            dbContext.Images.Add(newImage);
-            dbContext.SaveChanges();
+            if (!string.Equals(fileInfo.Name, "Alien-isolation-front-cover.jpg", StringComparison.CurrentCultureIgnoreCase))
+            {
+                dbContext.Images.Add(newImage);
+                dbContext.SaveChanges();
+            }
             return newImage;
         }
     }

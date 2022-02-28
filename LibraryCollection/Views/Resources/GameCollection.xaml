@@ -1,6 +1,9 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:i="http://schemas.microsoft.com/xaml/behaviors">
+                    xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+                    xmlns:vm="clr-namespace:LibraryCollection.ViewModels">
+
+    <!-- Small Animation when the mouse enters and exits the game cover, makes it look more responsive -->
     <Storyboard x:Key="OnMouseEnter1">
         <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="gameBoxCover" >
             <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.05">
@@ -17,9 +20,9 @@
             </EasingDoubleKeyFrame>
         </DoubleAnimationUsingKeyFrames>
     </Storyboard>
-    
-    
-    <DataTemplate x:Key="GameGridItem" DataType="vm:GameItem">
+
+    <!-- The Data Template for how a GameItem should be displayed -->
+    <DataTemplate DataType="{x:Type vm:GameItem}">
         <Grid x:Name="gameBoxCover" HorizontalAlignment="Left" Width="250" Height="280" Margin="3">
             <Grid.Background>
                 <LinearGradientBrush>
@@ -60,11 +63,7 @@
                 </StackPanel.Background>
                 <TextBlock Text="{Binding Title}" Style="{StaticResource Header}"  Margin="15,0"/>
                 <TextBlock Text="{Binding ReleasedYear}" Style="{StaticResource SubHeader}" Margin="15,0" />
-                
-
             </StackPanel>
-
-
         </Grid>
     </DataTemplate>
 

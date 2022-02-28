@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LibraryCollection.ViewModels;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,7 +31,7 @@ namespace LibraryCollection.Controls
 
         public static readonly DependencyProperty ItemsSourceProperty =
             DependencyProperty.Register("ItemsSource", typeof(IEnumerable),typeof(SearchableItemCollection));
-        public IEnumerable ItemsSource { get => (ListCollectionView)GetValue(ItemsSourceProperty); set => SetValue(ItemsSourceProperty, value); }
+        public IEnumerable ItemsSource { get => (IEnumerable)GetValue(ItemsSourceProperty); set => SetValue(ItemsSourceProperty, value); }
 
         public SearchableItemCollection()
         {
