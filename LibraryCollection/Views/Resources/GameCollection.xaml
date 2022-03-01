@@ -21,7 +21,9 @@
         </DoubleAnimationUsingKeyFrames>
     </Storyboard>
 
-    <!-- The Data Template for how a GameItem should be displayed -->
+    <!-- The Data Template for how a GameItem should be displayed 
+    the multiple templates isn't greate and really could be solved another way 
+    this is for demo purposes only to show the use of templates for specific data types-->
     <DataTemplate DataType="{x:Type vm:GameItem}">
         <Grid x:Name="gameBoxCover" HorizontalAlignment="Left" Width="250" Height="280" Margin="3">
             <Grid.Background>
@@ -67,7 +69,7 @@
         </Grid>
     </DataTemplate>
 
-    <DataTemplate DataType="{x:Type vm:GenesisGameItem}">
+    <DataTemplate DataType="{x:Type vm:SegaGameItem}">
         <Grid x:Name="gameBoxCover" HorizontalAlignment="Left" Width="250" Height="280" Margin="3">
             <Grid.Background>
                 <LinearGradientBrush>
@@ -98,9 +100,16 @@
             <Border>
                 <Image x:Name="frontImage" Source="{Binding FrontImage}"  Stretch="Fill"  RenderOptions.BitmapScalingMode="Fant" AutomationProperties.Name="{Binding Title}" />
             </Border>
-            <Polygon Points="90,0 0,0,0,90" Stroke="Blue" Fill="Blue" >
-                
-            </Polygon>
+
+            <Polygon Points="90,0 0,0,0,90" Stroke="Blue" Fill="Blue"/>
+            <TextBlock  Width="80" Height="20" Text="{Binding SystemName}" FontWeight="Bold">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <RotateTransform Angle="-45"/>
+                        <TranslateTransform X="-80" Y="-80"/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+            </TextBlock>
             <StackPanel Height="100" VerticalAlignment="Bottom">
                 <StackPanel.Background>
                     <LinearGradientBrush StartPoint="0,1" EndPoint="0,0" >
@@ -113,5 +122,172 @@
             </StackPanel>
         </Grid>
     </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:NintendoGameItem}">
+        <Grid x:Name="gameBoxCover" HorizontalAlignment="Left" Width="250" Height="280" Margin="3">
+            <Grid.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="Transparent" Offset="0"/>
+                    <GradientStop Color="Transparent" Offset=".25"/>
+                    <GradientStop Color="Black" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="MouseDown">
+                    <i:InvokeCommandAction Command="{Binding Path=OpenDetails}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <Grid.Triggers>
+                <EventTrigger RoutedEvent="MouseEnter">
+                    <BeginStoryboard  x:Name="CollectionItemMouseOver" Storyboard="{StaticResource OnMouseEnter1}"/>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="MouseLeave">
+                    <StopStoryboard BeginStoryboardName="CollectionItemMouseOver"/>
+                </EventTrigger>
+            </Grid.Triggers>
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform x:Name="GameScale"/>
+                </TransformGroup>
+            </Grid.RenderTransform>
 
+            <Border>
+                <Image x:Name="frontImage" Source="{Binding FrontImage}"  Stretch="Fill"  RenderOptions.BitmapScalingMode="Fant" AutomationProperties.Name="{Binding Title}" />
+            </Border>
+
+            <Polygon Points="90,0 0,0,0,90" Stroke="Red" Fill="Red"/>
+            <TextBlock Width="80" Height="20" Text="{Binding SystemName}" FontWeight="Bold">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <RotateTransform Angle="-45"/>
+                        <TranslateTransform X="-80" Y="-80"/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+            <StackPanel Height="100" VerticalAlignment="Bottom">
+                <StackPanel.Background>
+                    <LinearGradientBrush StartPoint="0,1" EndPoint="0,0" >
+                        <GradientStop Color="Transparent" Offset="0"/>
+                        <GradientStop Color="LightGray" Offset="1"/>
+                    </LinearGradientBrush>
+                </StackPanel.Background>
+                <TextBlock Text="{Binding Title}" Style="{StaticResource Header}"  Margin="15,0"/>
+                <TextBlock Text="{Binding ReleasedYear}" Style="{StaticResource SubHeader}" Margin="15,0" />
+            </StackPanel>
+        </Grid>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:SonyGameItem}">
+        <Grid x:Name="gameBoxCover" HorizontalAlignment="Left" Width="250" Height="280" Margin="3">
+            <Grid.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="Transparent" Offset="0"/>
+                    <GradientStop Color="Transparent" Offset=".25"/>
+                    <GradientStop Color="Black" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="MouseDown">
+                    <i:InvokeCommandAction Command="{Binding Path=OpenDetails}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <Grid.Triggers>
+                <EventTrigger RoutedEvent="MouseEnter">
+                    <BeginStoryboard  x:Name="CollectionItemMouseOver" Storyboard="{StaticResource OnMouseEnter1}"/>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="MouseLeave">
+                    <StopStoryboard BeginStoryboardName="CollectionItemMouseOver"/>
+                </EventTrigger>
+            </Grid.Triggers>
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform x:Name="GameScale"/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+
+            <Border>
+                <Image x:Name="frontImage" Source="{Binding FrontImage}"  Stretch="Fill"  RenderOptions.BitmapScalingMode="Fant" AutomationProperties.Name="{Binding Title}" />
+            </Border>
+
+            <Polygon Points="90,0 0,0,0,90" Stroke="Yellow" Fill="Yellow"/>
+            
+            <TextBlock Width="80" Height="20" Text="{Binding SystemName}" FontSize="10" FontWeight="Bold">
+                <TextBlock.LayoutTransform>
+                    <TransformGroup>
+                        <!--<RotateTransform Angle="-45"/>-->
+                        
+                    </TransformGroup>
+                </TextBlock.LayoutTransform>
+                    <TextBlock.RenderTransform>
+                        <TransformGroup>
+                            <RotateTransform Angle="-45"/>
+                            <TranslateTransform X="-80" Y="-80"/>
+                        </TransformGroup>
+                    </TextBlock.RenderTransform>
+            </TextBlock>
+            
+            <StackPanel Height="100" VerticalAlignment="Bottom">
+                <StackPanel.Background>
+                    <LinearGradientBrush StartPoint="0,1" EndPoint="0,0" >
+                        <GradientStop Color="Transparent" Offset="0"/>
+                        <GradientStop Color="LightGray" Offset="1"/>
+                    </LinearGradientBrush>
+                </StackPanel.Background>
+                <TextBlock Text="{Binding Title}" Style="{StaticResource Header}"  Margin="15,0"/>
+                <TextBlock Text="{Binding ReleasedYear}" Style="{StaticResource SubHeader}" Margin="15,0" />
+            </StackPanel>
+        </Grid>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:MicrosoftGameItem}">
+        <Grid x:Name="gameBoxCover" HorizontalAlignment="Left" Width="250" Height="280" Margin="3">
+            <Grid.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="Transparent" Offset="0"/>
+                    <GradientStop Color="Transparent" Offset=".25"/>
+                    <GradientStop Color="Black" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="MouseDown">
+                    <i:InvokeCommandAction Command="{Binding Path=OpenDetails}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <Grid.Triggers>
+                <EventTrigger RoutedEvent="MouseEnter">
+                    <BeginStoryboard  x:Name="CollectionItemMouseOver" Storyboard="{StaticResource OnMouseEnter1}"/>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="MouseLeave">
+                    <StopStoryboard BeginStoryboardName="CollectionItemMouseOver"/>
+                </EventTrigger>
+            </Grid.Triggers>
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform x:Name="GameScale"/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+
+            <Border>
+                <Image x:Name="frontImage" Source="{Binding FrontImage}"  Stretch="Fill"  RenderOptions.BitmapScalingMode="Fant" AutomationProperties.Name="{Binding Title}" />
+            </Border>
+            
+            <Polygon Points="90,0 0,0,0,90" Stroke="Green" Fill="Green"/>
+            <TextBlock Width="80" Height="20" Text="{Binding SystemName}" FontWeight="Bold">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <RotateTransform Angle="-45"/>
+                        <TranslateTransform X="-80" Y="-80"/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+            
+            <StackPanel Height="100" VerticalAlignment="Bottom">
+                <StackPanel.Background>
+                    <LinearGradientBrush StartPoint="0,1" EndPoint="0,0" >
+                        <GradientStop Color="Transparent" Offset="0"/>
+                        <GradientStop Color="LightGray" Offset="1"/>
+                    </LinearGradientBrush>
+                </StackPanel.Background>
+                <TextBlock Text="{Binding Title}" Style="{StaticResource Header}"  Margin="15,0"/>
+                <TextBlock Text="{Binding ReleasedYear}" Style="{StaticResource SubHeader}" Margin="15,0" />
+            </StackPanel>
+        </Grid>
+    </DataTemplate>
 </ResourceDictionary>

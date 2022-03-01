@@ -42,7 +42,12 @@ namespace LibraryCollection.ViewModels
 
         private static GameItem Map(Game game, LibraryDbContext dbContext, INavigate navigator)
         {
-            return game.SystemId == GenesisGameItem.GenesisGUID ? new GenesisGameItem(dbContext, game, navigator): new GameItem(dbContext, game, navigator);
+            if (SegaGameItem.SystemIds.Contains(game.SystemId)) return new SegaGameItem(dbContext, game, navigator);
+            if (SonyGameItem.SystemIds.Contains(game.SystemId)) return new SonyGameItem(dbContext, game, navigator);
+            if (NintendoGameItem.SystemIds.Contains(game.SystemId)) return new NintendoGameItem(dbContext, game, navigator);
+            if(MicrosoftGameItem.SystemIds.Contains(game.SystemId)) return new MicrosoftGameItem(dbContext, game,navigator);
+
+            return new GameItem(dbContext, game, navigator);
         }
 
         private void UpdateFilter()
