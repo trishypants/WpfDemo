@@ -2,7 +2,7 @@
 using Common.WPF.ViewModel;
 using LibraryCollection.Helper;
 using LibraryCollection.Model;
-
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -14,7 +14,7 @@ using System.Windows.Input;
 
 namespace LibraryCollection.ViewModels
 {
-    public class CollectionViewModel : NavigationBaseViewModel
+    public class CollectionViewModel : NavigationBaseViewModel, ICollectionViewModel
     {
         public ObservableCollection<GameItem> Games { get => GetProperty<ObservableCollection<GameItem>>(); set => SetProperty(value); }
         public ListCollectionView FilteredGames { get => GetProperty<ListCollectionView>(); set => SetProperty(value); }
@@ -23,6 +23,9 @@ namespace LibraryCollection.ViewModels
         private LibraryDbContext dbContext;
         public CollectionViewModel()
         {
+            dbContext = new LibraryDbContext("../../../gamelib.sqlite3");
+            Games = new ObservableCollection<GameItem>();
+            FilteredGames = new ListCollectionView(Games);
             this.ReceivedNavigator += NavigationReady;
         }
 
@@ -32,22 +35,20 @@ namespace LibraryCollection.ViewModels
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void NavigationReady(object? sender, EventArgs e)
+        private async void NavigationReady(object? sender, EventArgs e)
         {
-            dbContext = new LibraryDbContext("../../../gamelib.sqlite3");
-            Games = new ObservableCollection<GameItem>(dbContext.Games.OrderBy(x => x.Title).Select(x => Map(x, dbContext,navigator))); // This loads all games, and it's slow would be better to fetch in batchest as it's scrolled and Async
-            FilteredGames = new ListCollectionView(Games);
             RegisterPropertyMonitor(() => SearchGames, UpdateFilter);
+            await LoadGamesAsync();
         }
 
-        private static GameItem Map(Game game, LibraryDbContext dbContext, INavigate navigator)
+        private async Task LoadGamesAsync()
         {
-            if (SegaGameItem.SystemIds.Contains(game.SystemId)) return new SegaGameItem(dbContext, game, navigator);
-            if (SonyGameItem.SystemIds.Contains(game.SystemId)) return new SonyGameItem(dbContext, game, navigator);
-            if (NintendoGameItem.SystemIds.Contains(game.SystemId)) return new NintendoGameItem(dbContext, game, navigator);
-            if(MicrosoftGameItem.SystemIds.Contains(game.SystemId)) return new MicrosoftGameItem(dbContext, game,navigator);
-
-            return new GameItem(dbContext, game, navigator);
+            foreach (var game in dbContext.Games.OrderBy(x => x.Title.ToLower()))
+            {
+                var gi = await GameItem.Construct(game, dbContext, navigator);
+                Games.Add(gi); // This loads all games, and it's slow would be better to fetch in pages as it's scrolled and Async
+                await Task.Delay(20);
+            }
         }
 
         private void UpdateFilter()

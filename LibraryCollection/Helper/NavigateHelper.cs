@@ -10,8 +10,7 @@ using System.Windows.Navigation;
 namespace LibraryCollection.Helper
 {
     /// <summary>
-    /// Helper class to manage navigation between pages,
-    /// a light and modified design I wrote years ago, it's influned by the UWP (AppStore App) navigation
+    /// Helper class to manage navigation between pages
     /// </summary>
     public class NavigateHelper : INavigate
     {
@@ -31,14 +30,12 @@ namespace LibraryCollection.Helper
 
         public void NavigateTo<T>() where T : INavigationPage
         {
-            var page = Construct<T>();
-            navigation.Navigate(page);
+            NavigateTo<T>(null);
         }
 
         public void NavigateTo<T>(object state) where T : INavigationPage
         {
-            var page = Construct<T>();
-            navigation.Navigate(page, state);
+            navigation.Navigate(Construct<T>(), state);
         }
 
         /// <summary>

@@ -17,6 +17,10 @@ using Microsoft.Toolkit.Mvvm.Input;
 using LibraryCollection.Helper;
 using LibraryCollection.Views;
 using MImage = LibraryCollection.Model.Image;
+using System.ComponentModel;
+using System.Threading;
+using System.Windows.Threading;
+using Microsoft.EntityFrameworkCore;
 
 namespace LibraryCollection.ViewModels
 {
@@ -53,12 +57,43 @@ namespace LibraryCollection.ViewModels
             this.navigator = navigator;
             this.gameModel = game;
             OpenDetails = new RelayCommand(NavigateToDetails);
-            LoadFromDB(game);
+
             if (string.IsNullOrWhiteSpace(Description))
                 Description = LoremIpsum;
-            RegisterPropertyMonitor(() => FrontImageData, LoadImage); // Register a Action to be performed when FrontImageData is modified
+            RegisterPropertyMonitor(() => FrontImageData, async () => await LoadImage()); // Register a Action to be performed when FrontImageData is modified
+        }
+        /// <summary>
+        /// Factory Method
+        /// </summary>
+        /// <param name="game">Model Game Record</param>
+        /// <param name="dbContext">DataBase Context</param>
+        /// <param name="navigator">Navigation Control</param>
+        /// <returns></returns>
+        public static async Task<GameItem> Construct(Game game, LibraryDbContext dbContext, INavigate navigator)
+        {
+            return await Map(game, dbContext, navigator);
         }
 
+        /// <summary>
+        /// Map the incoming Game to the correct GameItem type
+        /// </summary>
+        /// <param name="game">Model Game Record</param>
+        /// <param name="dbContext">DataBase Context</param>
+        /// <param name="navigator">Navigation Control</param>
+        /// <returns></returns>
+        private static async Task<GameItem> Map(Game game, LibraryDbContext dbContext, INavigate navigator)
+        {
+            GameItem result = null;
+            if (SegaGameItem.SystemIds.Contains(game.SystemId)) result = new SegaGameItem(dbContext, game, navigator);
+            else if (SonyGameItem.SystemIds.Contains(game.SystemId)) result = new SonyGameItem(dbContext, game, navigator);
+            else if (NintendoGameItem.SystemIds.Contains(game.SystemId)) result = new NintendoGameItem(dbContext, game, navigator);
+            else if (MicrosoftGameItem.SystemIds.Contains(game.SystemId)) result = new MicrosoftGameItem(dbContext, game, navigator);
+            else result = new GameItem(dbContext, game, navigator);
+
+            await result.LoadFromDB(game);
+            return result;
+
+        }
         /// <summary>
         /// Save changes to a db
         /// </summary>
@@ -90,9 +125,18 @@ namespace LibraryCollection.ViewModels
         /// for the demo.
         /// </summary>
         /// <param name="game">Game Model</param>
-        private void LoadFromDB(Game game)
+        private async Task LoadFromDB(Game game)
         {
-            foreach (var prop in typeof(Game).GetProperties(BindingFlags.Public | BindingFlags.Instance)) // Simple Property Copy 
+            CopyProperties(game);
+            FrontImageData = dbContext.Images.FirstOrDefault(x => x.ImageId == game.CoverImage);
+            Developer = new CompanyItem(dbContext.Companies.FirstOrDefault(x => x.CompanyId == game.DeveloperId));
+            Publisher = new CompanyItem(dbContext.Companies.FirstOrDefault(x => x.CompanyId == game.PublisherId));
+            // await LoadImage().ConfigureAwait(true);
+
+        }
+        private void CopyProperties(Game game)
+        {
+            foreach (var prop in typeof(Game).GetProperties(BindingFlags.Public | BindingFlags.Instance))
             {
                 if (prop.CanRead)
                 {
@@ -101,10 +145,6 @@ namespace LibraryCollection.ViewModels
                         SetProperty(value, prop.Name, false);
                 }
             }
-            FrontImageData = dbContext.Images.FirstOrDefault(x => x.ImageId == game.CoverImage);
-            Developer = new CompanyItem(dbContext.Companies.FirstOrDefault(x => x.CompanyId == game.DeveloperId));
-            Publisher = new CompanyItem(dbContext.Companies.FirstOrDefault(x => x.CompanyId == game.PublisherId));
-            LoadImage();
         }
         /// <summary>
         /// Same as above, hacked together to get data pushing back in to the database, it's not even really needed
@@ -129,13 +169,16 @@ namespace LibraryCollection.ViewModels
         /// Locate the image  and read it in to be displayed, this is not good because it doesn't unload for items not
         /// on screen or load items getting on screen, it chews up the memory
         /// </summary>
-        private void LoadImage()
+        private async Task LoadImage()
         {
             if (FrontImageData != null && !string.IsNullOrWhiteSpace(FrontImageData.path))
             {
                 if (File.Exists($".\\Content\\Images\\{FrontImageData.path}"))
                 {
-                    FrontImage = ((Bitmap)Bitmap.FromFile($".\\Content\\Images\\{FrontImageData.path}")).BitmapToImageSource();
+                    Bitmap bitmapImage = await Task.Run(() =>
+                    ((Bitmap)Bitmap.FromFile($".\\Content\\Images\\{FrontImageData.path}")));
+
+                    FrontImage = bitmapImage.BitmapToImageSource();
                 }
                 else
                 {
@@ -144,7 +187,6 @@ namespace LibraryCollection.ViewModels
                 if (CoverImage != FrontImageData.ImageId)
                     CoverImage = FrontImageData.ImageId;
             }
-
         }
         /// <summary>
         /// Just some text filler because the db isn't complete and was just easier this way

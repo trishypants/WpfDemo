@@ -10,7 +10,7 @@ using System.Windows.Media.Imaging;
 namespace LibraryCollection.Extensions
 {
     /// <summary>
-    /// BitmapImage is an image source, used for binding in XAML but Bitmap load images easiser 
+    /// BitmapImage is an image source, used for binding in XAML
     /// </summary>
     public static class Bitmap_Extensions
     {
